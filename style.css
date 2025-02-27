@@ -1,3 +1,5 @@
+/*Estilos generales */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,20 +8,19 @@
 body {
   font: 16px arial, sans-serif;
   line-height: 24px;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   margin: 40px auto 60px;
 }
 
 header {
-  display: grid;
-  grid-template-columns: 1fr auto;
   display: flex;
   background-color: turquoise;
-  padding: 40px;
-  margin: 40px;
+  padding: 5%;
+  margin: 5%;
   border-radius: 8px;
-  gap: 20px;
   align-items: stretch;
+  gap: 3%;
 }
 
 a {
@@ -28,14 +29,11 @@ a {
 
 h1{
   font-size: 2.5rem;
-  margin-bottom: 16px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: darkred;
-}
-
-hr {
-  border: 0.5px solid coral;
-  margin-bottom: 16px;
+  border-bottom: 3px solid coral;
+  height: 2.5rem;
+  margin-bottom: 3%;
 }
 
 .info {
@@ -80,6 +78,7 @@ h2 {
 dd {
   border-left: 2px solid coral;
   padding-left: 32px;
+  margin-bottom: 5%;
 }
 
 ul {
@@ -92,4 +91,76 @@ ul {
   font-style: italic;
   font-weight:500;
   font-size: 16px;
+}
+
+/*Media queries para hacer el diseño responsive*/
+
+@media (max-width: 768px) {
+  body {
+    margin: 20px auto 40px;
+  }
+
+  header {
+    flex-direction: column;
+    padding: 5%;
+    margin: 5%;
+    align-items: center;
+    gap: 24px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 3%;
+  }
+
+  dl {
+    margin: 0 20px;
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .subcat {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 10px auto 20px;
+  }
+
+  header {
+    padding: 5%;
+    margin: 5%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 3%;
+  }
+
+  dl {
+    margin: 0 10px;
+  }
+
+  img {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .subcat {
+    font-size: 12px;
+  }
 }
